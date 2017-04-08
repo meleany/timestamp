@@ -4,7 +4,11 @@ var moment = require("moment");
 var timezone = require("moment-timezone");
 var express = require("express");
 var app = express();
+<<<<<<< HEAD
 var PORT =  process.env.PORT || 3000;
+=======
+var PORT = process.env.PORT || 3000;
+>>>>>>> f6cdfc0e9ddf45511c62949b5ade0c6fd6311105
 
 // I use the actual date of the server as an example for the user in the problem description. 
 // This date is not necessary the real time of the client.
