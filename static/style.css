@@ -1,0 +1,41 @@
+h1{
+  font-family: Salsa; 
+  font-size: 40px;
+  color: rgb(10,50,70, 0.9);
+  text-align: center;
+  padding-top: 30px;
+}
+
+h3{
+  color: rgb(10,50,70,0.9);
+  text-align: center;
+  font-family: Salsa;
+  margin-bottom: 50px;
+}
+
+div{
+  font-family: Poiret One;
+  font-size: 17px;
+  margin-left: 100px;
+}
+
+a{
+  text-decoration: none;
+}
+
+i{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#footer{
+  font-family: Arima Madurai;
+  font-weight: bold;
+  font-size: 17px;  
+  text-shadow: 5px 2px 5px rgb(105,55,105);
+  color: rgb(10,50,70);
+  text-align: center;
+  padding: 10px;
+  border-top: 5px double rgba(10,50,70,0.5);
+  margin-top: 30px;
+}

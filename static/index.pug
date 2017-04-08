@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    link(href='https://fonts.googleapis.com/css?family=Salsa', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Poiret One', rel='stylesheet', type='text/css')    
+    link(href='https://fonts.googleapis.com/css?family=Arima Madurai', rel='stylesheet')
+    link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+    style
+      include style.css
+    title Timestamp  
+  body
+    h1 Timestamp Microservice
+    h3 An API Project For FreeCodeCamp
+    div 
+      p Timestamp accepts a string as a parameter and checks it (to use this app append the desired string at the end of the url).
+      ul
+        li If it contains a natural language date or a Unix timestamp returns both for the given date.
+        li If it doesn't will return null for those properties.
+        li An example of a natural language date is: 
+          strong #{natural} 
+          | and the corresponding Unix timestamp: #{unix}   
+      p 
+        strong Example of usage:
+      a(href= path+"/December%2015,%202015" target="_blank") #{path}/December%2015,%202015
+      p
+      a(href= path+"/1450137600" target="_blank") #{path}/1450137600
+      p
+        strong Expected response:
+      p { "unix": 1450137600, "natural": "December 15, 2015" }
+    include foot.pug
