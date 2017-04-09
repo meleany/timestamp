@@ -35,8 +35,7 @@ app.set("views", __dirname+"/static");
 
 app.get("/", function(request, response){
   var url = request.protocol + "://" + request.hostname;
-  //response.render("index", {natural: now.format("LLL"), unix: nowUnix, path: url});
-  response.send("Hello World in Pug!");
+  response.render("index.pug", {natural: now.format("LLL"), unix: nowUnix, path: url});
   console.log("request sent from: ", url);
 });
 
