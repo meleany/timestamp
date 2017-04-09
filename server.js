@@ -15,7 +15,7 @@ var strdate, timestamp;
 // Function where the string is validated. If is a number (positive or negative) returns a date
 // Depending on the date there are glitches that need to be corrected. Ex. Feb 30 is accepted.
 // Modification need to be added as moment().isValid() soon will be deprecated for certain formats.
-var checkString = function(param){
+/*var checkString = function(param){
   strdate = null;
   timestamp = null;
   if(!isNaN(param)){
@@ -27,24 +27,25 @@ var checkString = function(param){
       timestamp = moment.utc(param).unix().toString();
     }
   }
-};
+};*/
 
 //npm install pug in order to use pug, Express loads the module internally using:
 app.set("view engine", "pug");
 app.set("views", __dirname+"/static");
 
 app.get("/", function(request, response){
-  var url = request.protocol + "://" + request.hostname;
-  response.render("index", {natural: now.format("LLL"), unix: nowUnix, path: url});
+  //var url = request.protocol + "://" + request.hostname;
+  //response.render("index", {natural: now.format("LLL"), unix: nowUnix, path: url});
+  response.send("Hello World in Pug!");
   console.log("request sent from: ", url);
 });
 
 //Gets the parameter passed as a string from the url and checks if it is a natural date,
 // an Unix timestamp or else.
-app.get("/:id", function(request, response){
+/*app.get("/:id", function(request, response){
   checkString(request.params.id);
   response.send({ "unix": timestamp, "natural": strdate}); 
-});
+});*/
 
 // Starts a server and listens in PORT connection
 // The default routing is 0.0.0.0 represented by :: in IPv6
